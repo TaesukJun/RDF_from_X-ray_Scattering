@@ -17,7 +17,7 @@ console.log(NJ);
  * declare and allocate
  * 
  */
-var kame; //declare
+var kame; //declare -> cannot use in const
 console.log(kame);
 kame = 'cake'; //allocate
 console.log(kame);
