@@ -94,3 +94,5 @@ const YuJin7 = {
     name: 2003,
 }
 console.log(YuJin7);
+
+
