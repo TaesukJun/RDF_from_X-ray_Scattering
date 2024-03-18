@@ -109,15 +109,16 @@ delete yuJin3['name'];
 console.log(yuJin3);
 
 // Object.defineProperty(yuJin3, 'name', {
-//     value: '코드팩토리',
+//     value: 'cdf',
 // })
 console.log(Object.getOwnPropertyDescriptor(yuJin3, 'name'));
 
 const yuJin4 = {
-    name: '안유진',
+    name: 'an',
     year: 2003,
+    //object nesting
     wonYoung: {
-        name: '장원영',
+        name: 'jwy',
         year: 2002,
     },
 };
