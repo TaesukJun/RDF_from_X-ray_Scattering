@@ -34,3 +34,4 @@ function runner(){
 }
 
 runner();
+console.log('hello');
