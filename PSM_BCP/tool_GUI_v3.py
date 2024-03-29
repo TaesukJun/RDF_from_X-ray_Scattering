@@ -194,9 +194,12 @@ def Clicked_Analyze():
                 
                 roughfitq = x2[peaks]
 
+                p = OtherwayData[0].rfind('/')
+                p2 = OtherwayData[0].count('_',0,p)
+
 
                 k13 = OtherwayData[0].split('_')
-                k14 = k13[whereistemp_section-1]
+                k14 = k13[whereistemp_section-1+p2]
 
                 rawPeakDataTemp = []
                 rawPeakDataTemp = k14[:-1]
@@ -240,8 +243,12 @@ def Clicked_Analyze():
                 peakdata02 = []
                 peakdata01 = []
                 
+
+                
+
                 k3 = OtherwayData[0].split('_')
-                k4 = k3[whereistemp_section-1]
+                
+                k4 = k3[whereistemp_section-1+p2]
                 peakdata01 = k4[:-1]
                 
                 
@@ -530,9 +537,9 @@ my_button = Button(frame_Result_01, text="Save", font = ("Times new roman",12),
        padx = 20, pady = 5, bg='light blue',
        command=saveClicked
                    ).grid(row=0,column=1)
-Label(frame_Result_01,text="Fitting Result from:").grid(row=1,column=0)
-Radiobutton(frame_Result_01, text='Raw', variable=Option_Var_02 , value = "Raw" ).grid(row=2, column =0 )
-Radiobutton(frame_Result_01, text='Lorentz', variable=Option_Var_02 , value = "Lorentz" ).grid(row=2, column =1 )
+Label(frame_Result_01,text="SAVE format for Fitting Result:").grid(row=1,column=0)
+Radiobutton(frame_Result_01, text='Raw Data forn:\nTemp/X1/Y1/X2/Y2...', variable=Option_Var_02 , value = "Raw" ).grid(row=2, column =0 )
+Radiobutton(frame_Result_01, text='Lorentz\nThis detects 2 peaks', variable=Option_Var_02 , value = "Lorentz" ).grid(row=2, column =1 )
 
 
 
