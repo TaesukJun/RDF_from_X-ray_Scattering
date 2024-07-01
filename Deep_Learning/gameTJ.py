@@ -1,10 +1,10 @@
 import pygame
 import random
-from enum import Enum
+from enum import Enum # symbolic names bound to unique values
 from collections import namedtuple
 import numpy as np
 
-pygame.init()
+pygame.init() # initialize all imported pygame modules.
 #font = pygame.font.Font('arial.ttf', 25)
 font = pygame.font.SysFont('arial', 25)
 
@@ -23,7 +23,8 @@ class Direction(Enum):
     LEFT = 2
     UP = 3
     DOWN = 4
-    
+# This returns Direction.RIGHT.value == 1
+
 Point = namedtuple('Point', 'x, y')
 
 # rgb colors
